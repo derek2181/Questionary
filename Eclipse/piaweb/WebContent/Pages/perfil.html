@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../Stylesheets/main.css">
+    <link rel="stylesheet" href="../Stylesheets/Profile.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <title>Questionary</title>
+</head>
+
+<body>
+    <div class="modal-bg">
+        <div class="modal-box">
+            <div class="texto-modal">
+                <h1>Editar perfil</h1>
+                <button class="close-modal">X</button>
+
+            </div>
+
+            <form action="/piaweb/Perfil/Preguntas" method="POST">
+                <input type="hidden" name="accion" value="Preguntas">
+
+                <div class="imagen-form">
+                    <img src="../Images/user.jpg" alt="">
+                    <input type="file" id="image" value="Adjuntar imagen" name="" id="">
+                    <label for="image" id="selectImage"><i class="fas fa-upload"></i> Editar imagen</label>
+                    <span id="fileDetails"></span>
+                </div>
+
+                <div class="form-modal">
+                    <section>
+                        <div class="input-box">
+                            <i class="fas fa-user"></i>
+                            <input type="text" name="nombre" placeholder="Nombre" value="<%= user.getNombre()%>">
+                        </div>
+                        <div class="spans">
+                            <span>sadf</span>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="input-box">
+                            <i class="fas fa-user-friends"></i>
+                            <input type="text" name="apellidoP" placeholder="Apellido paterno" value="<%=user.getApellidoP()%>">
+                        </div>
+                        <div class="spans">
+                            <span>sadf</span>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div class="input-box">
+                            <i class="fas fa-user-friends"></i>
+                            <input type="text" name="apellidoM" placeholder="Apellido materno" value="<%=user.getApellidoM() %>">
+                        </div>
+                        <div class="spans">
+                            <span>sadf</span>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div class="input-box">
+                            <i class="fas fa-envelope"></i>
+                            <input type="correo" name="correo" placeholder="Correo" value="<%=user.getCorreo()  %>">
+                        </div>
+                        <div class="spans">
+                            <span>sadf</span>
+                        </div>
+                    </section>
+
+
+                    <section>
+                        <div class="input-box">
+                            <i class="fas fa-key"></i>
+                            <input type="password" name="contrasena1" placeholder="Contraseña">
+                        </div>
+                        <div class="spans">
+                            <span>sadf</span>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div class="input-box">
+                            <i class="fas fa-key"></i>
+                            <input type="password" placeholder="Confirmar contraseña">
+                        </div>
+                        <div class="spans">
+                            <span>sadf</span>
+                        </div>
+                    </section>
+
+
+                </div>
+
+                <div class="date-block">
+                    <div class="date-form">
+                        <i class="fas fa-calendar-alt"></i>
+                        <input type="date" name="fecha" value="2020-00-05">
+                    </div>
+                    <div class="spans">
+                        <span>sadf</span>
+                    </div>
+                </div>
+                <div class="button-modal">
+                    <input type="submit" value="Guardar cambios">
+
+                </div>
+
+
+            </form>
+
+
+
+
+        </div>
+    </div>
+    <div class="main-container">
+
+        <div class="header">
+            <div class="top-header">
+                <div class="top-header-container">
+                    <div class="logo-element">
+                        <img src="../Images/Logo.png" alt="">
+                        <h1>Questionary</h1>
+                    </div>
+                    <form action="">
+                        <div class="search-bar">
+
+                            <div class="search-bar-elements"> <input type="text" placeholder="Buscar pregunta..." name="searchbox" id="">
+                                <div class="search-button">
+                                    <button><a href=""><i class="fas fa-search"></i></a></button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                    <div class="question-button">
+
+                        <a href="#">Preguntar</a>
+                    </div>
+                </div>
+
+                <div class="user-log">
+
+                    <a href="">
+                        Usuario
+                        <i class="fas fa-user"></i></a>
+
+                    <div class="dropdown header-profile">
+                        <button class="btn btn-secondary fas fa-sort-down" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                          
+                            </button>
+                        <ul class="dropdown-menu header-profile" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item fas fa-user" href="#"><span>Perfil</span></a></li>
+                            <li>
+                                <a class="dropdown-item fas fa-sign-out-alt" href="#"> <span>Cerrar sesion</span> </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="bottom-header">
+                <div class="bottom-header-container">
+
+                    <a href="#"><i class="fas fa-filter"></i>Todas las categorias</a>
+                    <a href="#">Arte</a>
+                    <a href="#">Deportes</a>
+                    <a href="#">Entretenimiento</a>
+                    <a href="#">Videojuegos</a>
+                    <a href="#">Programacion</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="middle-container">
+            <div class="profile-top-block">
+                <div class="profile-info">
+                    <img src="../Images/user.jpg" alt="">
+                    <div class="profile-elements">
+                        <span>Jaime Mausan</span>
+                        <div class="profile-tags">
+                            <h3>Derek cortes madriz</h3>
+                            <h3>dereka40@hotmail.com</h3>
+                            <h3>28 años</h3>
+                            <div class="edit-profile">
+                                <button class="btn-modal">Editar perfil</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="account-suspended">
+                <i class="fas fa-times"></i>Esta cuenta ha sido suspendida<i class="fas fa-times"></i>
+            </div>
+
+
+            <div class="profile-content">
+
+                <div class="profile-options">
+                    <a class="block-profile option-selected " href=""><span>2 </span>Preguntas</a>
+                    <a class="block-profile" href="../Pages/profile-favorites.html"><span>2 </span>Favoritos</a>
+                    <a class="block-profile" href="../Pages/profile-votes.html"><span>2 </span>Votos</a>
+                    <a class="block-profile " href="../Pages/profile-answers.html"><span>2 </span>Respuestas</a>
+                    <a class="block-profile " href="../Pages/profile-dislikes.html"><span>2 </span>Dislikes</a>
+                </div>
+
+                <div class="profile-stuff">
+                    <div class="question">
+                        <div class="picture-question">
+                            <img src="../Images/user.jpg" alt="">
+                        </div>
+                        <div class="question-description">
+                            <h2><a href="#">¿Lorem ipsum, dolor sit amet consectetur adipisicing elit.?</a></h2>
+                        </div>
+                        <div class="question-date">
+                            <i class="far fa-calendar-alt"></i> <span>15:56 26/02/2021</span>
+                            <a href="#">Videojuegos</a>
+                            <div class="question-reactions">
+                                <span>2</span> <i class="far fa-thumbs-up"></i>
+                                <span>5</span> <i class="far fa-thumbs-down"></i>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="question">
+                        <div class="picture-question">
+                            <img src="../Images/user.jpg" alt="">
+                        </div>
+                        <div class="question-description">
+                            <h2><a href="#">¿Lorem ipsum, dolor sit amet consectetur adipisicing elit.?</a></h2>
+                        </div>
+                        <div class="question-date">
+                            <i class="far fa-calendar-alt"></i> <span>15:56 26/02/2021</span>
+                            <a href="#">Videojuegos</a>
+                            <div class="question-reactions">
+                                <span>2</span> <i class="far fa-thumbs-up"></i>
+                                <span>5</span> <i class="far fa-thumbs-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <div class="picture-question">
+                            <img src="../Images/user.jpg" alt="">
+                        </div>
+                        <div class="question-description">
+                            <h2><a href="#">¿Lorem ipsum, dolor sit amet consectetur adipisicing elit.?</a></h2>
+                        </div>
+                        <div class="question-date">
+                            <i class="far fa-calendar-alt"></i> <span>15:56 26/02/2021</span>
+                            <a href="#">Videojuegos</a>
+                            <div class="question-reactions">
+                                <span>2</span> <i class="far fa-thumbs-up"></i>
+                                <span>5</span> <i class="far fa-thumbs-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="footer">
+            <div class="top-footer" id="toTop">
+                Volver arriba
+            </div>
+
+            <div class="bottom-footer">
+                <a href="#">Categorias</a>
+                <ul>
+                    <li>
+                        <a href="#">Arte</a>
+                    </li>
+                    <li>
+                        <a href="#">Videojuegos</a>
+                    </li>
+                    <li>
+                        <a href="#">Electronica</a>
+                    </li>
+                    <li>
+                        <a href="#">Programacion</a>
+                    </li>
+                    <li>
+                        <a href="#">Deportes</a>
+                    </li>
+                    <li>
+                        <a href="#">Medicina</a>
+                    </li>
+                    <li>
+                        <a href="#">Vida y salud</a>
+                    </li>
+                    <li>
+                        <a href="#">Cocina</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Cocina</a>
+                    </li>
+                    <li>
+                        <a href="#">Arte</a>
+                    </li>
+                    <li>
+                        <a href="#">Videojuegos</a>
+                    </li>
+                    <li>
+                        <a href="#">Electronica</a>
+                    </li>
+                    <li>
+                        <a href="#">Programacion</a>
+                    </li>
+                    <li>
+                        <a href="#">Deportes</a>
+                    </li>
+                    <li>
+                        <a href="#">Medicina</a>
+                    </li>
+                    <li>
+                        <a href="#">Vida y salud</a>
+                    </li>
+                    <li>
+                        <a href="#">Cocina</a>
+                    </li>
+
+                    <li>
+
+                </ul>
+
+            </div>
+            <div class="developers">
+                <span>Copyright &copy; LMAD</span>
+                <span>Felix Leopoldo Lara Sanchez <br>
+                     Derek Jafet Cortes Madriz
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+        var modal = document.querySelector('.btn-modal');
+        var modalBg = document.querySelector('.modal-bg');
+        var close_modal = document.querySelector('.close-modal');
+        modal.addEventListener('click', () => {
+            modalBg.classList.add('bg-active');
+        });
+
+
+        function dragon(respuesta) {
+
+        }
+        close_modal.addEventListener('click', () => {
+            modalBg.classList.remove('bg-active');
+        });
+
+
+
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                menu_fixed();
+            });
+            menu_fixed();
+
+            $('#toTop').click(function() {
+
+                $("html, body").scrollTop(0);
+                // $('html, body').stop().animate({scrollTop:0}, 2000);
+            });
+
+
+            $('#image').change(function() {
+                setFileName();
+            });
+            setFileName();
+
+
+
+            function menu_fixed() {
+                if ($(this).scrollTop() > 0) {
+                    $('.header').addClass('fixed');
+                } else $('.header').removeClass('fixed');
+            }
+
+            function setFileName() {
+                var fileSelected = $('#image').prop("files")[0];
+                $('#fileDetails').text(`(${fileSelected.name} - ${fileSelected.size/1000} KB)`);
+            }
+        })
+    </script>
+
+</body>
+
+</html>

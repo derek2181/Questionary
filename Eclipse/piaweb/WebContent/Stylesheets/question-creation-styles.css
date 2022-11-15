@@ -1,0 +1,57 @@
+
+
+form.answer h2 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+form.answer label {
+    font-size: 2rem;
+    font-size: #13263A;
+}
+
+form.answer>select {
+    border: 2px solid #d4d4d4;
+    border-radius: 2rem;
+    padding: 2rem;
+    width: 100%;
+    margin-bottom: 2rem;
+    outline: 0;
+    font-size: 2rem;
+}
+
+form.answer div.input-box-question {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 2rem;
+    border: 2px solid #d4d4d4;
+    border-radius: 2rem;
+    color: #d4d4d4;
+}
+
+form.answer div.input-box-question input {
+    width: 90%;
+    padding: 2rem;
+    outline: 0;
+    font-size: 3rem;
+    border: none;
+    border-left: 2px solid #d4d4d4;
+    border-right: 2px solid #d4d4d4;
+}
+
+form.answer div.question-mark {
+    width: 5%;
+    display: block;
+    text-align: center;
+    padding: 2rem;
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+form.answer div.textarea-box {
+	font-size: 25px;
+}
+
+form.answer div .error-field::placeholder {
+	color: red;
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../Stylesheets/main.css">
+    <link rel="stylesheet" href="../Stylesheets/question-detail-styles.css">
+    <link rel="stylesheet" href="../Stylesheets/question-creation-styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <title>Questionary</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="header">
+            <div class="top-header">
+                <div class="top-header-container">
+                    <div class="logo-element">
+                        <img src="../Images/Logo.png" alt="">
+                        <h1>Questionary</h1>
+                    </div>
+
+                    <div class="search-bar">
+                        <div class="search-bar-elements"> <input type="text" placeholder="Buscar pregunta..." name="searchbox" id="">
+                            <div class="search-button">
+                                <button href=""><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="question-button">
+
+                        <a href="#">Preguntar</a>
+                    </div>
+                </div>
+
+                <div class="user-log">
+
+                    <a href="">
+                        Usuario
+                        <i class="fas fa-user"></i></a>
+                </div>
+            </div>
+            <div class="bottom-header">
+                <div class="bottom-header-container">
+
+                    <a href="#"><i class="fas fa-filter"></i>Todas las categorias</a>
+                    <a href="#">Arte</a>
+                    <a href="#">Deportes</a>
+                    <a href="#">Entretenimiento</a>
+                    <a href="#">Videojuegos</a>
+                    <a href="#">Programacion</a>
+                </div>
+            </div>
+        </div>
+        <div class="middle-container">
+            <form class="answer" action="">
+                <h2>Hacer una pregunta</h2>
+                <div class="input-box-question">
+                    <div class="question-mark">¿</div>
+                    <input type="text" placeholder="Escribe tu pregunta">
+                    <div class="question-mark">?</div>
+                </div>
+                <!-- <input type="text" placeholder="Categoria"> -->
+                <label for="category">Seleccione la categoria: </label>
+                <select id="category">
+                    <option value="Deportes">Deportes</option>
+                    <option value="Deportes">Arte</option>
+                    <option value="Deportes">Videojuegos</option>
+                    <option value="Deportes">Hogar</option>
+                </select>
+                <div class="textarea-box">
+                    <textarea placeholder="Escribe aqui la descripcion de tu pregunta..."></textarea>
+                    <div>
+                        <input type="file" id="image" value="Adjuntar imagen">
+                        <label for="image" id="selectImage"><i class="fas fa-upload"></i> Seleccionar imagen</label>
+                        <span id="fileDetails"></span>
+                    </div>
+                </div>
+                <div class="align-right">
+                    <button type="submit">Publicar pregunta</button>
+                </div>
+            </form>
+        </div>
+        <div class="footer">
+            <div class="top-footer" id="toTop" href="#">
+                Volver arriba
+            </div>
+
+            <div class="bottom-footer">
+                <a href="#">Categorias</a>
+                <ul>
+                    <li>
+                        <a href="#">Arte</a>
+                    </li>
+                    <li>
+                        <a href="#">Videojuegos</a>
+                    </li>
+                    <li>
+                        <a href="#">Electronica</a>
+                    </li>
+                    <li>
+                        <a href="#">Programacion</a>
+                    </li>
+                    <li>
+                        <a href="#">Deportes</a>
+                    </li>
+                    <li>
+                        <a href="#">Medicina</a>
+                    </li>
+                    <li>
+                        <a href="#">Vida y salud</a>
+                    </li>
+                    <li>
+                        <a href="#">Cocina</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Cocina</a>
+                    </li>
+                    <li>
+                        <a href="#">Arte</a>
+                    </li>
+                    <li>
+                        <a href="#">Videojuegos</a>
+                    </li>
+                    <li>
+                        <a href="#">Electronica</a>
+                    </li>
+                    <li>
+                        <a href="#">Programacion</a>
+                    </li>
+                    <li>
+                        <a href="#">Deportes</a>
+                    </li>
+                    <li>
+                        <a href="#">Medicina</a>
+                    </li>
+                    <li>
+                        <a href="#">Vida y salud</a>
+                    </li>
+                    <li>
+                        <a href="#">Cocina</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="developers">
+                <span>Copyright &copy;</span>
+                <span>Felix Leopoldo Lara Sanchez <br>
+                     Derek Jafet Cortes Madriz
+                </span>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                menu_fixed();
+            });
+            menu_fixed();
+
+            $('#toTop').click(function() {
+
+                $("html, body").scrollTop(0);
+                // $('html, body').stop().animate({scrollTop:0}, 2000);
+            });
+
+
+            $('#image').change(function() {
+                setFileName();
+            });
+            setFileName();
+
+
+            function menu_fixed() {
+                if ($(this).scrollTop() > 0) {
+                    $('.header').addClass('fixed');
+                } else $('.header').removeClass('fixed');
+            }
+
+            function setFileName() {
+                var fileSelected = $('#image').prop("files")[0];
+                $('#fileDetails').text(`(${fileSelected.name} - ${fileSelected.size/1000} KB)`);
+            }
+        })
+    </script>
+</body>

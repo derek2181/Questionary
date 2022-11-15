@@ -1,0 +1,10 @@
+<Context>
+	<!-- 
+	 <Resource name="jdbc/PiaWeb" auth="Container" type="javax.sql.DataSource" maxTotal="100" maxIdle="20" 
+			maxWaitMillis="5000" username="root" password="1234" driverClassName="com.mysql.cj.jdbc.Driver" url="jdbc:mysql://localhost:3306/piaweb?serverTimezone=UTC">
+	</Resource>
+	-->
+		<Resource name="jdbc/PiaWeb" auth="Container" type="javax.sql.DataSource" maxTotal="100" maxIdle="80" 
+			maxWaitMillis="5000" username="root" password="root" driverClassName="com.mysql.cj.jdbc.Driver" url="jdbc:mysql://localhost:3306/piaweb?serverTimezone=UTC">	
+		</Resource>
+</Context>

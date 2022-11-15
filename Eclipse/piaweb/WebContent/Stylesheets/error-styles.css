@@ -1,0 +1,19 @@
+ div.error-card {
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    background: #fff;
+    width: 100%;
+    padding: 2rem;
+}
+
+div.error-card h1 {
+    width: 100%;
+    text-align: center;
+}
+
+div.error-card img {
+    width: 50%;
+    height: 400px;
+    border-radius: 1em;
+}

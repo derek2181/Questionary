@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/piaweb/Images/Logo.png">
+    <link rel="stylesheet" href="../Stylesheets/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../Stylesheets/question-detail-styles.css">
+    <title>Questionary</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="header">
+            <div class="top-header">
+                <div class="top-header-container">
+                    <div class="logo-element">
+                        <img src="/piaweb/Images/Logo.png" alt="">
+                        <h1><a href="/piaweb/">Questionary</a></h1>
+                    </div>
+                    <form method="GET" action="/piaweb/Busqueda">
+
+                        <div class="search-bar">
+
+                            <div class="search-bar-elements">
+                                <!--    <input type="hidden" name="accion" value="Resultado">-->
+                                <input type="text" placeholder="Buscar pregunta..." name="searchbox" id="">
+                                <div class="search-button">
+                                    <!--    <c:url var="linkSearch" value="/Busqueda/Resultado"></c:url> -->
+                                    <button><i class="fas fa-search"></i></button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                    <div class="question-button">
+                        <c:url var="linkAsk" value="/Preguntar"></c:url>
+                        <a href="${linkAsk}">Preguntar</a>
+                    </div>
+                </div>
+
+                <div class="user-log">
+
+                    <a href="Login">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <div class="dropdown header-profile">
+                        <button class="btn btn-secondary fas fa-sort-down" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                          
+                            </button>
+                        <ul class="dropdown-menu header-profile" aria-labelledby="dropdownMenuButton">
+
+
+                            <c:url var="linkUser" value="/Perfil/Preguntas">
+                                <c:param name="userID" value="<%=user.getID_Usuario() %>"></c:param>
+                            </c:url>
+                            <li><a class="dropdown-item fas fa-user" href="${linkUser}"><span><%= user.getNombre() + " " + user.getApellidoP()%>
+                           		</span></a>
+                            </li>
+
+                            <li><a class="dropdown-item fas fa-user" href="/piaweb/Acceso/Login"><span>Iniciar Sesi�n
+                           		</span></a>
+                            </li>
+
+
+
+                            <c:url var="linkLogout" value="/Acceso">
+                                <c:param name="action" value="logout"></c:param>
+                            </c:url>
+                            <li>
+                                <a class="dropdown-item fas fa-sign-out-alt" href="${linkLogout}"> <span>Cerrar sesion</span> </a>
+                            </li>
+
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="bottom-header">
+                <div class="bottom-header-container">
+
+                    <a href="#"><i class="fas fa-filter"></i>Todas las categorias</a>
+                    <a href="#">Arte</a>
+                    <a href="#">Deportes</a>
+                    <a href="#">Entretenimiento</a>
+                    <a href="#">Videojuegos</a>
+                    <a href="#">Programacion</a>
+                </div>
+            </div>
+        </div>
+        <div class="middle-container">
+            <div class="card-question-detail">
+                <div class="card-question-detail-header">
+                    <div class="card-question-img">
+                        <c:url var="linkProfile" value="/Perfil/Preguntas">
+                            <c:param name="userID" value="<%=questionDetails.getIdUsuario()%>"></c:param>
+                        </c:url>
+                        <img src="../Images/user.jpg" alt="">
+                        <a href="${linkProfile}"><span>derek cortes madriz</span></a>
+                    </div>
+                    <div class="card-question-title">
+                        <h2>sgdsfgdsfvdsfvdsfgdfs
+                        </h2>
+                    </div>
+                    <div class="card-question-date">
+                        <span><i class="far fa-calendar-alt"></i> <span>12312142141</span></span>
+                        <span class="category"><a href="#">Videojuegos</a> </span>
+                    </div>
+                </div>
+                <div class="card-question-detail-content">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga molestias obcaecati, neque tenetur, saepe inventore alias impedit vitae enim debitis quo commodi cumque numquam itaque!
+                    </p>
+
+                    <h3>Imagen Descriptiva:</h3>
+                    <img src="/piaweb/Imagenes/Preguntas?imageID=<%=questionDetails.getQuestion().getID_Pregunta() %>" alt="">
+
+                </div>
+                <div class="card-question-detail-footer">
+                    <div class="card-left-btns">
+
+                        <a href="#" class="btn-edit"><i class="fas fa-pencil-alt"></i> Editar</a>
+                        <a href="#" class="btn-delete"><i class="fas fa-trash-alt"></i> Eliminar</a>
+
+
+                    </div>
+                    <div class="card-right-btns">
+
+                        <button id="fav" class="targeted"><i class="far fa-star"></i></button>
+                        <button>15 <i class="far fa-thumbs-up"></i></button>
+                        <button>5 <i class="far fa-thumbs-down"></i></button>
+
+                    </div>
+                </div>
+            </div>
+            <h2>4 respuestas</h2>
+            <hr>
+            <div class="card-answer correct-answer">
+                <div class="card-answer-header">
+                    <div class="card-answer-img">
+                        <img src="../Images/user.jpg" alt="">
+                        <span>Jaime Maussan</span>
+                    </div>
+                    <div class="card-answer-date">
+                        <span><i class="far fa-calendar-alt"></i> <span>15:56 26/02/2021</span></span>
+                    </div>
+                    <span class="tag-correct"><i class="fas fa-check-circle"></i> Correcta</span>
+                </div>
+                <div class="card-answer-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis
+                        unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                        voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non
+                        numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                    <h3>Imagen Descriptiva:</h3>
+                    <img src="../Images/dog.jpg" alt="">
+                </div>
+                <div class="card-answer-footer">
+                    <div class="card-left-btns">
+                        <!-- <a href="#" class="btn-correct-answer"><i class="fas fa-check-circle"></i> Marcar como correcta</a> -->
+                    </div>
+                    <div class="card-right-btns">
+                        <button type="button" class="answerButtonLike targeted" id="10">15 <i class="far fa-thumbs-up"></i></button>
+                        <button type="button" class="answerButtonDislike" id="10">5 <i class="far fa-thumbs-down"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-answer">
+                <div class="card-answer-header">
+                    <div class="card-answer-img">
+                        <img src="../Images/user.jpg" alt="">
+                        <span>Jaime Maussan</span>
+                    </div>
+                    <div class="card-answer-date">
+                        <span><i class="far fa-calendar-alt"></i> <span>15:56 26/02/2022</span> </span>
+
+                    </div>
+                    <!-- <span class="tag-correct"><i class="fas fa-check-circle"></i> Correcta</span> -->
+                </div>
+                <div class="card-answer-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis
+                        unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                        voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non
+                        numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                </div>
+                <div class="card-answer-footer">
+                    <div class="card-left-btns">
+                        <a href="#" class="btn-correct-answer"><i class="fas fa-check-circle"></i> Marcar como correcta</a>
+                    </div>
+                    <div class="card-right-btns">
+                        <button>15 <i class="far fa-thumbs-up"></i></button>
+                        <button>5 <i class="far fa-thumbs-down"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-answer">
+                <div class="card-answer-header">
+                    <div class="card-answer-img">
+                        <img src="../Images/user.jpg" alt="">
+                        <span>Jaime Maussan</span>
+                    </div>
+                    <div class="card-answer-date">
+                        <span><i class="far fa-calendar-alt"></i> <span>15:56 26/02/2021</span></span>
+
+                    </div>
+                    <!-- <span class="tag-correct"><i class="fas fa-check-circle"></i> Correcta</span> -->
+                </div>
+                <div class="card-answer-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis
+                        unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                        voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non
+                        numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                </div>
+                <div class="card-answer-footer">
+                    <div class="card-left-btns">
+                        <a href="#" class="btn-correct-answer"><i class="fas fa-check-circle"></i> Marcar como correcta</a>
+                    </div>
+                    <div class="card-right-btns">
+                        <button>10<i class="far fa-thumbs-up"></i></button>
+                        <button>5<i class="far fa-thumbs-down"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-answer deleted-answer">
+                <div class="card-answer-header">
+                    <div class="card-answer-img">
+                        <img src="../Images/user.jpg" alt="">
+                        <span>Jaime Maussan</span>
+                    </div>
+                    <div class="card-answer-date">
+                        <span><i class="far fa-calendar-alt"></i> <span>15:56 26/02/2021</span></span>
+                    </div>
+                    <!-- <span class="tag-correct"><i class="fas fa-check-circle"></i> Correcta</span> -->
+                </div>
+                <div class="card-answer-content">
+                    <p>Esta respuesta ha sido eliminada.</p>
+                </div>
+            </div>
+            <div class="page-controls">
+                <a href="#" class="btn-change-page">&lt</a>
+                <a href="#" class="btn-change-page btn-next-page">&gt</a>
+            </div>
+            <%if(user != null) {%>
+                <%if(!user.getID_Usuario().equals(questionDetails.getIdUsuario())){ %>
+                    <form class="answer" action="">
+                        <h2>Responder a la pregunta</h2>
+                        <div class="textarea-box">
+                            <textarea placeholder="Escribe aqui tu respuesta..."></textarea>
+                            <div>
+                                <input type="file" id="image" value="Adjuntar imagen">
+                                <label for="image" id="selectImage"><i class="fas fa-upload"></i> Seleccionar imagen</label>
+                                <span id="fileDetails"></span>
+                            </div>
+                        </div>
+                        <div class="align-right">
+                            <button type="submit">Publicar respuesta</button>
+                        </div>
+                    </form>
+                    <%} %>
+                        <%} else {%>
+                            <form class="answer" action="">
+                                <h2>Responder a la pregunta</h2>
+                                <div class="textarea-box">
+                                    <textarea placeholder="Escribe aqui tu respuesta..."></textarea>
+                                    <div>
+                                        <input type="file" id="image" value="Adjuntar imagen">
+                                        <label for="image" id="selectImage"><i class="fas fa-upload"></i> Seleccionar imagen</label>
+                                        <span id="fileDetails"></span>
+                                    </div>
+                                </div>
+                                <div class="align-right">
+                                    <button type="submit">Publicar respuesta</button>
+                                </div>
+                            </form>
+                            <%} %>
+
+        </div>
+        <%@ include file="/Pages/Layouts/footer.jsp" %>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+
+    <script src="http://code.jquery.com/jquery-latest.js">
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('.answerButtonDislike').click(function() {
+
+                $('#10.answerButtonLike').removeClass('targeted');
+                if ($(this).hasClass('targeted')) {
+                    $(this).removeClass('targeted')
+
+                } else {
+                    $(this).addClass('targeted')
+                }
+            });
+
+            $('.answerButtonLike').click(function() {
+
+                $('#10.answerButtonDislike').removeClass('targeted');
+                if ($(this).hasClass('targeted')) {
+                    $(this).removeClass('targeted')
+
+                } else {
+                    $(this).addClass('targeted')
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

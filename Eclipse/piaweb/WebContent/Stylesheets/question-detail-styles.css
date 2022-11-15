@@ -1,0 +1,670 @@
+.midle-container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.middle-container .card-question-detail {
+    background: #fff;
+    border-radius: 1rem;
+    width: 100%;
+    padding: 2rem;
+    margin-bottom: 4rem;
+}
+
+
+/* Estilos del header de la tarjeta */
+
+.middle-container .card-question-detail .card-question-detail-header {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #d4d4d4;
+    padding-bottom: 1rem;
+}
+
+.middle-container .card-question-detail .card-question-detail-header .card-question-img {
+    flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+}
+
+.middle-container .card-question-detail .card-question-detail-header .card-question-title {
+    flex: 7;
+    display: flex;
+    justify-content: flex-start;
+    /* border: 1px solid #d4d4d4 */
+}
+
+.middle-container .card-question-detail .card-question-detail-header .card-question-date {
+    display: flex;
+    flex: 1;
+    /* border: 1px solid #d4d4d4; */
+    justify-content: flex-end;
+    flex-flow: column nowrap;
+}
+
+.middle-container .card-question-detail .card-question-detail-header .card-question-date span.category {
+    text-align: center;
+    background: #1ea5c2;
+    color: #fff;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.middle-container .card-question-detail .card-question-detail-header .card-question-date span.category a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.middle-container .card-question-detail .card-question-detail-header .card-question-date span.category a:hover {
+    text-decoration: underline;
+}
+
+.middle-container .card-question-detail .card-question-detail-header img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.middle-container .card-question-detail .card-question-detail-header .card-question-img a {
+    text-decoration: none;
+    color: #1ea5c2;
+    transition: all ease .3s;
+}
+
+.middle-container .card-question-detail .card-question-detail-header .card-question-img a:hover {
+    text-decoration: underline;
+}
+
+.middle-container .card-question-detail .card-question-detail-header .card-question-img span {
+    color: inherit;
+    text-align: center;
+}
+
+.middle-container .card-question-detail .card-question-detail-header .card-question-img span.edited-tag {
+    background: #1ea5c2;
+    color: #fff;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.middle-container .card-question-detail .card-question-detail-header h2 {
+    font-size: 4rem;
+    color: #13263a;
+}
+
+.middle-container .card-question-detail .card-question-detail-header span {
+    color: #d4d4d4;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+/* Estilos del apartado principal de la tarjeta */
+
+.middle-container .card-question-detail .card-question-detail-content {
+    margin-bottom: 2rem;
+}
+
+.middle-container .card-question-detail .card-question-detail-content p {
+    padding: 2rem;
+    font-size: 1.5rem;
+    color: #395a7d;
+    letter-spacing: 1px;
+    line-height: 2rem;
+    word-spacing: 5px;
+}
+
+.middle-container .card-question-detail .card-question-detail-content h3 {
+    font-size: 2.5rem;
+    padding: 2rem;
+}
+
+.middle-container .card-question-detail .card-question-detail-content img {
+    width: 30%;
+    padding: 0 2rem;
+}
+
+
+/* Estilos del footer */
+
+.middle-container .card-question-detail .card-question-detail-footer {
+    padding-top: 2rem;
+    padding-left: 2rem;
+    border-top: 1px solid #d4d4d4;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.middle-container .card-question-detail .card-question-detail-footer .card-left-btns,
+.middle-container .card-question-detail .card-question-detail-footer .card-right-btns {
+    display: flex;
+}
+
+.middle-container .card-question-detail .card-question-detail-footer .card-right-btns button {
+    outline: 0;
+}
+
+.middle-container .card-question-detail .card-question-detail-footer a {
+    padding: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    background: #1ea5c2;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    transition: all ease .3s;
+}
+
+.middle-container .card-question-detail .card-question-detail-footer a:hover,
+.middle-container .card-answer .card-answer-footer a:hover {
+    background: #395a7d;
+}
+
+.middle-container .card-question-detail .card-question-detail-footer button.btn-delete,
+.middle-container .card-answer .card-answer-footer button.btn-delete {
+    background: #d62829;
+    color: #f5f5f5;
+    border: none;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+}
+
+.middle-container .card-question-detail .card-question-detail-footer a.btn-delete:hover,
+.middle-container .card-answer .card-answer-footer a.btn-delete:hover {
+    background: #a11717;
+}
+
+
+/* 
+.middle-container .card-question-detail .card-question-detail-footer .card-right-btns {
+    justify-content: flex-end;
+} */
+
+.middle-container .card-question-detail .card-question-detail-footer button {
+    background: none;
+    /* border: none; */
+    padding: 1rem;
+    border: 2px solid #13263a;
+    font-size: 2rem;
+    margin-left: 1rem;
+    color: #13263a;
+    border-radius: 2rem;
+    transition: all ease .3s;
+}
+
+.middle-container .card-question-detail .card-question-detail-footer button:hover {
+    background: #13263a;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/* Divisor de preguntas y respuestas */
+
+.middle-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #13263a;
+}
+
+.middle-container hr {
+    margin-bottom: 2rem;
+    color: #13263a;
+}
+
+
+/* Estilos para las tarjetas de respuestas */
+
+.middle-container .card-answer {
+    background: #fff;
+    border-radius: 1rem;
+    width: 100%;
+    padding: 2rem;
+    margin-bottom: 4rem;
+    border-left: 1rem solid #1ea5c2;
+}
+
+.middle-container .card-answer.correct-answer {
+    border-left: 1rem solid #2dce8a;
+}
+
+.middle-container .card-answer.deleted-answer {
+    border-left: 1rem solid #e90c0c;
+}
+
+.middle-container .card-answer.deleted-answer .card-answer-content p {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.middle-container .card-answer .card-answer-header {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    border-bottom: 1px solid #d4d4d4;
+    padding: 1rem 2rem;
+}
+
+.middle-container .card-answer .card-answer-header .card-answer-img {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.middle-container .card-answer .card-answer-header .card-answer-img img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.middle-container .card-answer .card-answer-header a {
+    text-decoration: none;
+    color: #1ea5c2;
+}
+
+.middle-container .card-answer .card-answer-header a:hover {
+    text-decoration: underline;
+}
+
+.middle-container .card-answer .card-answer-header a span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.middle-container .card-answer .card-answer-header span.tag-correct {
+    color: #fff;
+    background: #2dce8a;
+    padding: 0.7rem;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    margin-right: 0.2rem;
+}
+
+.middle-container .card-answer .card-answer-header span.tag-edited {
+    color: #fff;
+    background: #1ea5c2;
+    padding: 0.7rem;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+}
+
+.middle-container .card-answer .card-answer-header .card-answer-date {
+    padding: 1rem;
+}
+
+.middle-container .card-answer .card-answer-header .card-answer-date span {
+    color: #d4d4d4;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+/* Estilos para contenido de respuesta */
+
+.middle-container .card-answer .card-answer-content p {
+    padding: 2rem;
+    font-size: 1.5rem;
+    color: #395a7d;
+    letter-spacing: 1px;
+    line-height: 2rem;
+    word-spacing: 5px;
+}
+
+.middle-container .card-answer .card-answer-content h3 {
+    font-size: 2.5rem;
+    padding: 2rem;
+}
+
+.middle-container .card-answer .card-answer-content img {
+    width: 30%;
+    padding: 2rem;
+}
+
+
+/* Estilos para footer de respuesta */
+
+.middle-container .card-answer .card-answer-footer {
+    border-top: 1px solid #d4d4d4;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-top: 2rem;
+    padding-left: 2rem;
+}
+
+.middle-container .card-answer .card-answer-footer .card-left-btns,
+.middle-container .card-answer .card-answer-footer .card-right-btns {
+    display: flex;
+}
+
+.middle-container .card-answer .card-answer-footer a {
+    padding: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    background: #1ea5c2;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    transition: all ease .3s;
+}
+
+.middle-container .card-answer .card-answer-footer button {
+    background: none;
+    /* border: none; */
+    padding: 1rem;
+    border: 2px solid #13263a;
+    font-size: 2rem;
+    margin-left: 1rem;
+    color: #13263a;
+    border-radius: 2rem;
+    transition: all ease .3s;
+}
+
+.middle-container .card-answer .card-answer-footer button:hover {
+    background: #13263a;
+    color: #fff;
+    cursor: pointer;
+}
+
+.middle-container .card-answer .card-answer-footer button.btn-correct-answer {
+    background: #1ea5c2;
+    margin-left: 0;
+    color: #f5f5f5;
+    font-size: 1.5rem;
+    border: none;
+}
+
+.middle-container .card-answer .card-answer-footer button.btn-correct-answer:hover {
+    background: #395a7d;
+}
+
+.middle-container .card-answer .card-answer-footer button.btn-correct-answer.btn-remove-correct-answer {
+    background: #d62829;
+}
+
+.middle-container .card-answer .card-answer-footer button.btn-correct-answer.btn-remove-correct-answer:hover {
+    background: #a11717;
+}
+
+form.answer {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 2rem;
+    margin-top: 4rem;
+}
+
+form div.textarea-box div {
+    background: none;
+    width: 10%;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    padding: 1rem;
+    /* border: 2px solid #000; */
+}
+
+form div.textarea-box div input[type="file"] {
+    opacity: 0;
+    width: 0.1px;
+    height: 0.1px;
+    /* position: absolute; */
+}
+
+form div.textarea-box div label {
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+    background: #1ea5c2;
+    border-radius: 1rem;
+    transition: all ease .3s;
+}
+
+form div.textarea-box div label:hover {
+    background: #13263a;
+}
+
+form div.textarea-box div span {
+    color: #d4d4d4;
+    font-weight: bold;
+    font-size: 1.2rem;
+    /* background: #000; */
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+
+form div.textarea-box {
+    border: 2px solid #d4d4d4;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+}
+
+form.answer div.textarea-box textarea {
+    display: block;
+    width: 90%;
+    font-size: 2rem;
+    /* border-radius: 2rem; */
+    resize: none;
+    padding: 2rem;
+    scroll-behavior: unset;
+    outline: none;
+    height: 20rem;
+    /* min-height: 250px;
+    max-height: 500px; */
+    /* border: 2px solid #000; */
+    border: none;
+    border-right: 2px solid #d4d4d4;
+    background: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+form.answer div.textarea-box textarea.error-field::placeholder {
+    color: red;
+}
+
+.align-right {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+form.answer button {
+    background: #13263a;
+    color: #f5f5f5;
+    border: none;
+    padding: 2rem;
+    border-radius: 1rem;
+    justify-self: flex-end;
+    width: 30%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    transition: all ease .3s;
+}
+
+.doomie {
+    background: #13263a;
+}
+
+form.answer button:hover {
+    background: #161616;
+    cursor: pointer;
+}
+
+.middle-container div.offline-answer {
+    margin-top: 2rem;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 2rem;
+    font-size: 2rem;
+}
+
+.middle-container div.offline-answer h2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.middle-container div.offline-answer p {
+    text-align: center;
+}
+
+.middle-container div.offline-answer p a {
+    text-decoration: none;
+    color: #1ea5c2
+}
+
+.middle-container div.offline-answer p a:hover {
+    text-decoration: underline;
+}
+
+div.middle-container div.success-message {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: #2dce8a;
+    padding: 2rem;
+    font-size: 2rem;
+    color: #f5f5f5;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+}
+
+div.middle-container div.success-message a {
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #f5f5f5;
+}
+
+div.middle-container div.success-message div {
+    cursor: pointer;
+}
+
+div.middle-container div.error-message {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: #d62829;
+    padding: 2rem;
+    font-size: 2rem;
+    color: #f5f5f5;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+}
+
+div.middle-container div.error-message a {
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #f5f5f5;
+}
+
+div.middle-container div.error-message div {
+    cursor: pointer;
+}
+
+
+div.modal-content div.modal-header h5 {
+    font-size: 30px;
+    text-align: center;
+}
+
+div.modal-content div.modal-body {
+    font-size: 20px;
+}
+
+div.modal-content div.modal-footer button.btn-cancel {
+    border: 2px solid #13263a;
+    color: #13263a;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background: none;
+    box-sizing: border-box;
+}
+
+div.modal-content div.modal-footer form button.btn-delete {
+    background-color: #d62829;
+    padding: 1.5rem;
+    color: #f5f5f5;
+    border: none;
+    border-radius: 1rem;
+}
+
+.middle-container .card-answer .card-answer-footer button.targeted, .middle-container .card-question-detail .card-question-detail-footer button.targeted {
+    background: #13263a;
+    color: #f5f5f5;
+}
+
+.middle-container .card-answer .card-answer-footer button:focus {
+    outline: 0;
+}
+
+#fav.targeted {
+    background: #e73407;
+    color: #f5f5f5;
+}
+
+
+div.modal-content div.modal-footer button.btn-cancel {
+    border: 2px solid #13263a;
+    color: #13263a;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background: none;
+    box-sizing: border-box;
+}
+
+div.modal-content div.modal-footer form button.btn-delete {
+    background-color: #d62829;
+    padding: 1.5rem;
+    color: #f5f5f5;
+    border: none;
+    border-radius: 1rem;
+}
+
+.middle-container .card-answer .card-answer-footer .card-left-btns div.modal-content div.modal-body {
+    font-size: 20px;
+}
+
+.middle-container .card-answer .card-answer-footer .card-left-btns div.modal-content div.modal-footer button.btn-cancel {
+    border: 2px solid #13263a;
+    color: #13263a;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background: none;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+}
+
+.middle-container .card-answer .card-answer-footer .card-left-btns div.modal-content div.modal-footer form button.btn-delete {
+    background-color: #d62829;
+    padding: 1.5rem;
+    color: #f5f5f5;
+    border: none;
+    border-radius: 1rem;
+}
+/* div.modal-content {
+    font-size: 2rem;
+} */

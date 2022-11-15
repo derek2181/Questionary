@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/piaweb/Images/Logo.png">
+    <link rel="stylesheet" href="../Stylesheets/main.css">
+    <link rel="stylesheet" href="../Stylesheets/advanced-search.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/piaweb/Stylesheets/advanced-search.css">
+    <title>Questionary</title>
+</head>
+
+<body>
+    <div class="main-container">
+
+        <div class="header">
+            <div class="top-header">
+                <div class="top-header-container">
+                    <div class="logo-element">
+                        <img src="/piaweb/Images/Logo.png" alt="">
+                        <h1><a href="/piaweb/">Questionary</a></h1>
+                    </div>
+                    <form method="GET" action="/piaweb/Busqueda">
+
+                        <div class="search-bar">
+
+                            <div class="search-bar-elements">
+                                <!--    <input type="hidden" name="accion" value="Resultado">-->
+                                <input type="text" placeholder="Buscar pregunta..." name="searchbox" id="">
+                                <div class="search-button">
+                                    <!--    <c:url var="linkSearch" value="/Busqueda/Resultado"></c:url> -->
+                                    <button><i class="fas fa-search"></i></button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                    <div class="question-button">
+                        <c:url var="linkAsk" value="/Preguntar"></c:url>
+                        <a href="${linkAsk}">Preguntar</a>
+                    </div>
+                </div>
+
+                <div class="user-log">
+
+                    <a href="Login">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <div class="dropdown header-profile">
+                        <button class="btn btn-secondary fas fa-sort-down" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                          
+                            </button>
+
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="bottom-header">
+                <div class="bottom-header-container">
+
+                    <a href="#"><i class="fas fa-filter"></i>Todas las categorias</a>
+                    <a href="#">Arte</a>
+                    <a href="#">Deportes</a>
+                    <a href="#">Entretenimiento</a>
+                    <a href="#">Videojuegos</a>
+                    <a href="#">Programacion</a>
+                </div>
+            </div>
+        </div>
+        <main>
+            <form action="" method="GET">
+                <section class="advanced-search-block">
+                    <div class="search-bar-advanced-search">
+                        <input type="search" placeholder="Buscar pregunta..." name="searchbox" id="">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+
+                    <div class="inputs-advanced-search">
+                        <div class="block-advanced-search">
+                            <label for="categories">Votos: </label>
+                            <select name="categories">
+                            <option selected>Todas</option>
+                            <option value="">0-5</option>
+                            <option value="">5-10</option>
+                            <option value="">10-15</option>
+                        </select>
+                        </div>
+                        <div class="block-advanced-search">
+                            <label for="categories">Categorias: </label>
+                            <select name="categories">
+                            <option selected>Todas</option>
+                            <option value="">Cocina</option>
+                            <option value="">Deportes</option>
+                            <option value="">Videojuegos</option>
+                        </select>
+                        </div>
+                        <div class="block-advanced-search">
+                            <label for="categories">Favoritos: </label>
+                            <select name="categories">
+                            <option selected>Todas</option>
+                            <option value="">0-5</option>
+                            <option value="">5-10</option>
+                            <option value="">10-15</option>
+                        </select>
+                        </div>
+
+                    </div>
+
+                    <div class="dates-advanced-search">
+                        <div class="block-dates">
+                            <label for="fechaInicio">Desde:</label>
+                            <input type="date" name="fechaInicio" id="">
+                        </div>
+                        <div class="block-dates">
+                            <label for="fechaInicio">Desde:</label>
+                            <input type="date" name="fechaInicio" id="">
+                        </div>
+                    </div>
+
+                </section>
+            </form>
+            <div class="no-results">
+                <h1>No se encontraron resultados...</h1>
+                <i class="fas fa-sad-tear"></i>
+            </div>
+
+
+        </main>
+        <div class="page-controls">
+            <a href="/piaweb/Busqueda?searchbox=<%=busqueda%>&pageNumber=<%=pageNumber -1 %>" class="btn-change-page">
+            &lt;</a>
+            <a href="/piaweb/Busqueda?searchbox=<%=busqueda%>&pageNumber=<%=pageNumber +1 %>" class="btn-change-page btn-next-page">&gt;</a>
+
+        </div>
+    </div>
+    <div class="footer">
+        <div class="top-footer" id="toTop">
+            Volver arriba
+        </div>
+
+        <div class="bottom-footer">
+            <a href="#">Categorias</a>
+            <ul>
+                <li>
+                    <a href="#">Arte</a>
+                </li>
+                <li>
+                    <a href="#">Videojuegos</a>
+                </li>
+                <li>
+                    <a href="#">Electronica</a>
+                </li>
+                <li>
+                    <a href="#">Programacion</a>
+                </li>
+                <li>
+                    <a href="#">Deportes</a>
+                </li>
+                <li>
+                    <a href="#">Medicina</a>
+                </li>
+                <li>
+                    <a href="#">Vida y salud</a>
+                </li>
+                <li>
+                    <a href="#">Cocina</a>
+                </li>
+
+                <li>
+                    <a href="#">Cocina</a>
+                </li>
+                <li>
+                    <a href="#">Arte</a>
+                </li>
+                <li>
+                    <a href="#">Videojuegos</a>
+                </li>
+                <li>
+                    <a href="#">Electronica</a>
+                </li>
+                <li>
+                    <a href="#">Programacion</a>
+                </li>
+                <li>
+                    <a href="#">Deportes</a>
+                </li>
+                <li>
+                    <a href="#">Medicina</a>
+                </li>
+                <li>
+                    <a href="#">Vida y salud</a>
+                </li>
+                <li>
+                    <a href="#">Cocina</a>
+                </li>
+
+                <li>
+
+            </ul>
+
+        </div>
+        <div class="developers">
+            <span>Copyright &copy; LMAD</span>
+            <span>Felix Leopoldo Lara Sanchez <br>
+                 Derek Jafet Cortes Madriz
+            </span>
+        </div>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                menu_fixed();
+            });
+            menu_fixed();
+            $('#toTop').click(function() {
+
+                $("html, body").scrollTop(0);
+                // $('html, body').stop().animate({scrollTop:0}, 2000);
+            });
+
+
+            function menu_fixed() {
+                if ($(this).scrollTop() > 0) {
+                    $('.header').addClass('fixed');
+                } else $('.header').removeClass('fixed');
+            }
+            // alert("Esto es una prueba");
+        })
+
+        function dropdown_selection1(elemento) {
+            let dropDown1 = document.getElementById("dropdownMenuButton1");
+            if (elemento === "Ninguna") {
+                dropDown1.innerHTML = "Votos";
+            } else {
+                dropDown1.innerHTML = elemento
+            }
+
+        }
+
+        function dropdown_selection2(elemento) {
+            let dropDown2 = document.getElementById("dropdownMenuButton2");
+            if (elemento === "Ninguna") {
+                dropDown2.innerHTML = "Favoritos";
+            } else {
+                dropDown2.innerHTML = elemento
+            }
+        }
+    </script>
+</body>
+
+</html>

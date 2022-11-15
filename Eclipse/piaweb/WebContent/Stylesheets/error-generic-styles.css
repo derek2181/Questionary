@@ -1,0 +1,35 @@
+main .logo-section{
+	justify-content: center;
+}
+
+main .form-login .vertical-center {
+	display:flex;
+	flex-flow: column nowrap;
+	
+}
+
+main .form-login .vertical-center h2 {
+	width: 100%;
+	text-align: center;
+}
+
+main .form-login .vertical-center img {
+	width: 60%;
+	margin: auto;
+	border-radius: 16px;
+	margin-bottom: 2rem;
+}
+
+main .form-login .vertical-center p {
+	font-size: 25px;
+	text-align:center;
+}
+
+main .form-login .vertical-center p a {
+	color: #1ea5c2;
+	text-decoration:none;
+}
+
+main .form-login .vertical-center p a:hover {
+	text-decoration:underline;
+}
